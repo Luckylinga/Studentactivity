@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KLU Conference Management System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 450px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #004b8d;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #004b8d;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #005bb5;
+    }
+
+    .toggle-link {
+      color: #004b8d;
+      cursor: pointer;
+      text-align: center;
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .klu-logo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 80px;
+    }
+
+    #submission-section {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <img src="https://kluniversity.in/images/KL-Logo.png" alt="KLU Logo" class="klu-logo">
+
+    <h2 id="form-title">Login</h2>
+
+    <!-- Login Form -->
+    <form id="login-form">
+      <label for="login-role">Login as:</label>
+      <select id="login-role" required>
+        <option value="participant">Participant</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <label for="login-email">Email:</label>
+      <input type="email" id="login-email" placeholder="yourname@kluniversity.in" required>
+
+      <label for="login-password">Password:</label>
+      <input type="password" id="login-password" required>
+
+      <button type="submit">Login</button>
+      <span class="toggle-link" onclick="toggleForm()">Don't have an account? Register</span>
+    </form>
+
+    <!-- Register Form -->
+    <form id="register-form" style="display: none;">
+      <label for="reg-name">Full Name:</label>
+      <input type="text" id="reg-name" required>
+
+      <label for="reg-email">Email:</label>
+      <input type="email" id="reg-email" placeholder="yourname@kluniversity.in" required>
+
+      <label for="reg-password">Password:</label>
+      <input type="password" id="reg-password" required>
+
+      <label for="reg-role">Register as:</label>
+      <select id="reg-role" required>
+        <option value="participant">Participant</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <button type="submit">Register</button>
+      <span class="toggle-link" onclick="toggleForm()">Already h

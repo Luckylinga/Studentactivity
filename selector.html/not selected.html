@@ -1,0 +1,48 @@
+
+2. :not Selector
+-----------------
+Definition: 
+The :not(selector) negates a specific selector, targeting elements that do not match the condition.
+
+Examples:
+---------
+Style all elements except the first paragraph:
+<style>
+p:not(:first-child) {
+font-style: italic;
+}
+</style>
+<div>
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<p>Paragraph 3</p>
+</div>
+
+Exclude elements with a specific class:
+---------------------------------------
+<style>
+div:not(.exclude) {
+background-color: yellow;
+}
+</style>
+<div>Div 1</div>
+<div class="exclude">Div 2 (Excluded)</div>
+<div>Div 3</div>
+
+3. ::before Pseudo-Element
+--------------------------
+Definition: 
+-----------
+The ::before pseudo-element inserts content before the selected element.
+Examples:
+
+Add an icon before headings:
+----------------------------
+<style>
+h1::before {
+content: "★ ";
+color: gold;
+}
+</style>
+<h1>Heading 1</h1>
+<h1>Heading 2</h1>
